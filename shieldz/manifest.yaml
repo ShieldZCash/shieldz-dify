@@ -1,0 +1,40 @@
+version: 0.1.0
+type: plugin
+author: shieldzcash
+name: shieldz
+label:
+  en_US: "Shieldz Swap Quotes"
+  zh_Hans: "Shieldz Swap Quotes"
+  pt_BR: "Shieldz Swap Quotes"
+  ja_JP: "Shieldz Swap Quotes"
+description:
+  en_US: "Live cross-chain crypto swap quotes: compare NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden routes for BTC, ETH, SOL, ZEC, USDC, USDT and 340+ assets on 40+ chains. Read-only, no API key."
+  zh_Hans: "Live cross-chain crypto swap quotes: compare NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden routes for BTC, ETH, SOL, ZEC, USDC, USDT and 340+ assets on 40+ chains. Read-only, no API key."
+  pt_BR: "Live cross-chain crypto swap quotes: compare NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden routes for BTC, ETH, SOL, ZEC, USDC, USDT and 340+ assets on 40+ chains. Read-only, no API key."
+  ja_JP: "Live cross-chain crypto swap quotes: compare NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden routes for BTC, ETH, SOL, ZEC, USDC, USDT and 340+ assets on 40+ chains. Read-only, no API key."
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/shieldz.yaml
+meta:
+  version: 0.1.0
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 1.0.0
+created_at: 2026-11-23T19:02:36.699807+03:00
+privacy: PRIVACY.md
+repo: https://github.com/ShieldZCash/shieldz-dify
+contact: support@shieldz.cash
+network:
+  domains:
+    - swap.shieldz.cash
+verified: false

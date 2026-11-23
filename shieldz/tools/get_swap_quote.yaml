@@ -1,0 +1,64 @@
+identity:
+  name: "get_swap_quote"
+  author: "shieldzcash"
+  label:
+    en_US: "Get cross-chain swap quote"
+    zh_Hans: "Get cross-chain swap quote"
+    pt_BR: "Get cross-chain swap quote"
+    ja_JP: "Get cross-chain swap quote"
+description:
+  human:
+    en_US: "Live quote for swapping one crypto asset for another across chains, comparing NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden."
+    zh_Hans: "Live quote for swapping one crypto asset for another across chains, comparing NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden."
+    pt_BR: "Live quote for swapping one crypto asset for another across chains, comparing NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden."
+    ja_JP: "Live quote for swapping one crypto asset for another across chains, comparing NEAR Intents, Chainflip, Relay, MAYAChain, BOB Gateway and Garden."
+  llm: "Get a live cross-chain swap quote. Assets use CHAIN.SYMBOL such as BTC.BTC, ETH.ETH, SOL.SOL, ZEC.ZEC, BASE.USDC, TRON.USDT. Returns the best route, expected output, all-in cost and a link to execute the swap from the user's own wallet. Read-only."
+parameters:
+  - name: from_asset
+    type: string
+    required: true
+    label:
+      en_US: "From asset"
+      zh_Hans: "From asset"
+      pt_BR: "From asset"
+      ja_JP: "From asset"
+    human_description:
+      en_US: "Asset to swap from, as CHAIN.SYMBOL, e.g. BTC.BTC or BASE.USDC"
+      zh_Hans: "Asset to swap from, as CHAIN.SYMBOL, e.g. BTC.BTC or BASE.USDC"
+      pt_BR: "Asset to swap from, as CHAIN.SYMBOL, e.g. BTC.BTC or BASE.USDC"
+      ja_JP: "Asset to swap from, as CHAIN.SYMBOL, e.g. BTC.BTC or BASE.USDC"
+    llm_description: "Asset to swap from, as CHAIN.SYMBOL, e.g. BTC.BTC or BASE.USDC"
+    form: llm
+  - name: to_asset
+    type: string
+    required: true
+    label:
+      en_US: "To asset"
+      zh_Hans: "To asset"
+      pt_BR: "To asset"
+      ja_JP: "To asset"
+    human_description:
+      en_US: "Asset to receive, as CHAIN.SYMBOL, e.g. ZEC.ZEC or SOL.SOL"
+      zh_Hans: "Asset to receive, as CHAIN.SYMBOL, e.g. ZEC.ZEC or SOL.SOL"
+      pt_BR: "Asset to receive, as CHAIN.SYMBOL, e.g. ZEC.ZEC or SOL.SOL"
+      ja_JP: "Asset to receive, as CHAIN.SYMBOL, e.g. ZEC.ZEC or SOL.SOL"
+    llm_description: "Asset to receive, as CHAIN.SYMBOL, e.g. ZEC.ZEC or SOL.SOL"
+    form: llm
+  - name: amount
+    type: string
+    required: true
+    label:
+      en_US: "Amount"
+      zh_Hans: "Amount"
+      pt_BR: "Amount"
+      ja_JP: "Amount"
+    human_description:
+      en_US: "Amount of from_asset in normal units, e.g. 0.05 or 100"
+      zh_Hans: "Amount of from_asset in normal units, e.g. 0.05 or 100"
+      pt_BR: "Amount of from_asset in normal units, e.g. 0.05 or 100"
+      ja_JP: "Amount of from_asset in normal units, e.g. 0.05 or 100"
+    llm_description: "Amount of from_asset in normal units, e.g. 0.05 or 100"
+    form: llm
+extra:
+  python:
+    source: tools/get_swap_quote.py

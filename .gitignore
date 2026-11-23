@@ -1,0 +1,3 @@
+*.difypkg
+.venv*
+__pycache__/

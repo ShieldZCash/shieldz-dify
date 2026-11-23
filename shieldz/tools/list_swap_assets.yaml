@@ -1,0 +1,49 @@
+identity:
+  name: "list_swap_assets"
+  author: "shieldzcash"
+  label:
+    en_US: "List swappable assets"
+    zh_Hans: "List swappable assets"
+    pt_BR: "List swappable assets"
+    ja_JP: "List swappable assets"
+description:
+  human:
+    en_US: "Search the 340+ assets that can be quoted, by symbol or chain, with their exact ids and USD prices."
+    zh_Hans: "Search the 340+ assets that can be quoted, by symbol or chain, with their exact ids and USD prices."
+    pt_BR: "Search the 340+ assets that can be quoted, by symbol or chain, with their exact ids and USD prices."
+    ja_JP: "Search the 340+ assets that can be quoted, by symbol or chain, with their exact ids and USD prices."
+  llm: "Search swappable crypto assets by symbol (e.g. USDC) and optional chain code (e.g. BASE, ETH, BTC, SOL, TRON). Returns exact asset ids to pass to get_swap_quote, USD prices and whether the contract is verified."
+parameters:
+  - name: query
+    type: string
+    required: false
+    label:
+      en_US: "Symbol"
+      zh_Hans: "Symbol"
+      pt_BR: "Symbol"
+      ja_JP: "Symbol"
+    human_description:
+      en_US: "Ticker or part of an asset id, e.g. USDC"
+      zh_Hans: "Ticker or part of an asset id, e.g. USDC"
+      pt_BR: "Ticker or part of an asset id, e.g. USDC"
+      ja_JP: "Ticker or part of an asset id, e.g. USDC"
+    llm_description: "Ticker or part of an asset id, e.g. USDC"
+    form: llm
+  - name: chain
+    type: string
+    required: false
+    label:
+      en_US: "Chain"
+      zh_Hans: "Chain"
+      pt_BR: "Chain"
+      ja_JP: "Chain"
+    human_description:
+      en_US: "Chain code, e.g. BASE, ETH, BTC, SOL, TRON"
+      zh_Hans: "Chain code, e.g. BASE, ETH, BTC, SOL, TRON"
+      pt_BR: "Chain code, e.g. BASE, ETH, BTC, SOL, TRON"
+      ja_JP: "Chain code, e.g. BASE, ETH, BTC, SOL, TRON"
+    llm_description: "Chain code, e.g. BASE, ETH, BTC, SOL, TRON"
+    form: llm
+extra:
+  python:
+    source: tools/list_swap_assets.py
